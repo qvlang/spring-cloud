@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 //使用feign调用服务
 //feign 整合了hystrix
-
-@FeignClient(name = "GOODS-SERVICE", fallbackFactory = GoodsServiceFallbackFactory.class)
+//使用zuul代理了访问微服务 要为请求增加认证需要让请求走zuul 所以feign的调用地址需要走zuul代理地址
+@FeignClient(name = "GATEWAY-ZUUL/GOODS-SERVICE", fallbackFactory = GoodsServiceFallbackFactory.class)
 public interface IGoodsService {
     //新增货物
     @PostMapping("/add")

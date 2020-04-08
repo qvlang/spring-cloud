@@ -13,6 +13,7 @@
         <module>user-service</module>
         <module>goods-service</module>
         <module>goods-service-01</module>
+        <module>gateway-zuul</module>
     </modules>
 
     <parent>

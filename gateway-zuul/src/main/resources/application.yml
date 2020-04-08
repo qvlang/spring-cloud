@@ -1,0 +1,20 @@
+server:
+  port: 9901
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7071/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 90
+
+spring:
+  application:
+    name: gateway-zuul
+zuul:
+  ignored-services: "*" #忽略所有服务名访问 设置后不能再通过服务名访问 必须通过配置路由访问
+  routes:
+    user-service: user/** # 配置微服务访问映射
+   # goods-service: goods/** 禁止内部服务被外部调用 只暴露需要被客户端调用的接口
