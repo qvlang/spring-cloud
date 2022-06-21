@@ -25,7 +25,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <mysql.version>8.0.18</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <lombok.version>1.18.10</lombok.version>
         <colud.version>Hoxton.RELEASE</colud.version>
         <pagehelper.version>1.2.10</pagehelper.version>
